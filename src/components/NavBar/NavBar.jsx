@@ -30,6 +30,10 @@ const NavBarWrapper = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 98%;
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -56,6 +60,9 @@ const MenuItemsWrapper = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled.li`
@@ -77,5 +84,8 @@ const AuthorBtnWrapper = styled.div`
   text-align: center;
   font-size: 19px;
   font-weight: 600;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export default NavBar;

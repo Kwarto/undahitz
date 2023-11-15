@@ -9,7 +9,7 @@ const Billboard = () => {
         <img src={banImg} alt="banner" />
       </LeftContent>
       <RightContent>
-        <div className="flag">Billboard</div>
+        <div className="flag">Undahitz</div>
         <h2>Discover & Enjoy Your Favorite Under Music Here</h2>
         <p>
           Unearth the Spectacular Soundscapes: Dive into the Depths of Undahitz,
@@ -33,6 +33,11 @@ const BillBoardWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 98%;
+  }
 `;
 
 const LeftContent = styled.article`
@@ -42,6 +47,9 @@ const LeftContent = styled.article`
     cursor: pointer;
     width: 100%;
     border-radius: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -95,6 +103,21 @@ const RightContent = styled.article`
     span {
       font-size: 18px;
       font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .flag {
+      width: 30%;
     }
   }
 `;

@@ -14,7 +14,7 @@ const Newsletter = () => {
               Always Get Notify <span>When Release</span>
             </h3>
             <p>
-              Join 250,000+ subscribers and get our 5 min daily newsletter on
+              Join 250,000+ subscribers and get our 5mins daily newsletter on
               our new release.
             </p>
           </div>

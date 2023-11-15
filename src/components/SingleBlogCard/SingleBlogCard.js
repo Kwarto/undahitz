@@ -44,6 +44,7 @@ const SingleBlogCard = ({ song }) => {
 };
 
 const SingleBlogCardWrapper = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;

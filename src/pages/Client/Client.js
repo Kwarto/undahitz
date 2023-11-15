@@ -2,6 +2,7 @@ import React from "react";
 import {
   Billboard,
   BlogContainer,
+  Footer,
   NavBar,
   Newsletter,
 } from "../../components/comp";
@@ -14,6 +15,7 @@ const Client = () => {
       <Billboard />
       <BlogContainer />
       <Newsletter />
+      <Footer />
     </ClientPageWrapper>
   );
 };
