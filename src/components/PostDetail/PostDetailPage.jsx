@@ -5,6 +5,7 @@ import { db } from "../../firebaseConfig";
 import styled from "styled-components";
 import { IoIosDownload } from "react-icons/io";
 import { NavBar } from "../comp";
+import { Genre } from "../../Sections";
 const PostDetailPage = () => {
   const { id } = useParams();
   const [song, setSong] = useState([]);
@@ -26,10 +27,11 @@ const PostDetailPage = () => {
         <BannerContainer>
           <img src={song?.imgUrl} alt={song?.title} />
           <div className="layer">
-            <audio src={song.trackUrl} controls />
+            <div className="controlBox">
+              <audio src={song.trackUrl} controls className="audioCon" />
+            </div>
           </div>
         </BannerContainer>
-        {/* 0249337087 */}
         <CaptionMetaInfoWrapper>
           <div className="gen">{song?.genre}</div>
           <div className="tit">{song?.title}</div>
@@ -49,6 +51,7 @@ const PostDetailPage = () => {
           </div>
         </CaptionMetaInfoWrapper>
       </PostDetailContentWrapper>
+      <Genre song={song} />
     </DetailWrapper>
   );
 };
@@ -59,6 +62,7 @@ const DetailWrapper = styled.section`
   background: var(--mainBgVariant);
   padding: 15px 0;
   overflow-x: hidden;
+  overflow: scroll;
 `;
 
 const PostDetailContentWrapper = styled.article`
@@ -75,11 +79,37 @@ const BannerContainer = styled.div`
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  position: relative;
 
   img {
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: inherit;
+  }
+
+  .layer {
+    position: absolute;
+    background: var(--btnBgVariant);
+    border-radius: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 97.5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .controlBox {
+      width: 80%;
+      background: linear-gradient(138deg, var(--shadowBg), var(--btnBgVariant));
+      border-radius: 50px;
+      cursor: pointer;
+
+      .audioCon {
+        width: 100%;
+      }
+    }
   }
 `;
 
