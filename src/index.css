@@ -21,6 +21,8 @@
   --textBg: rgb(0, 0, 0);
   --actBg: rgb(20, 114, 168);
   --overBg: rgba(0, 0, 0, 0.897);
+  --heroBg1: rgb(29, 103, 177);
+  --heroBg2: rgba(53, 85, 228, 0.952);
 }
 
 ::-webkit-scrollbar {

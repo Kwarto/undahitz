@@ -8,7 +8,7 @@ const RouterNavigation = () => {
       <Route path="/" element={<Client />} />
       <Route path="/blog" element={<encodeURI />} />
       <Route path="/client/post/:id" element={<Detail />} />
-      <Route path="/client/category" element={<Category />} />
+      <Route path="/client/genre" element={<Category />} />
     </Routes>
   );
 };

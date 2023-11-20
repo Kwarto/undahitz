@@ -17,7 +17,7 @@ const AboutTrack = ({ song }) => {
               <div
                 className="overlay"
                 onClick={() => {
-                  navigate(`/client/category/${song?.genre}`);
+                  navigate(`/client/genre/${song?.genre}`);
                 }}
               >
                 <h2>AfroBeat</h2>
