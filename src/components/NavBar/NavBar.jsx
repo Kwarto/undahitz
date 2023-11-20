@@ -10,7 +10,7 @@ const NavBar = () => {
       </LogoWrapper>
       <MenuItemsWrapper>
         <NavLink>Home</NavLink>
-        <NavLink>Blog</NavLink>
+        <NavLink>All Genre</NavLink>
         <NavLink>Services</NavLink>
         <NavLink>Contact</NavLink>
       </MenuItemsWrapper>

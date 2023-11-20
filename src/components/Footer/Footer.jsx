@@ -7,9 +7,10 @@ const Footer = () => {
 };
 
 const FooterWrapper = styled.footer`
-  width: 98%;
+  width: 90%;
   background: linear-gradient(var(--btnBgVariant), var(--textBg)),
     url(${fBgImg});
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 40px 30px var(--shadowBg);
   height: 40vh;
   margin: 0 auto;

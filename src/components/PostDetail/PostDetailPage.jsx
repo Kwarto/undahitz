@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import styled from "styled-components";
 import { IoIosDownload } from "react-icons/io";
-import { NavBar } from "../comp";
-import { Genre } from "../../Sections";
+import { Footer, NavBar } from "../comp";
+import { Follow, Genre } from "../../Sections";
 const PostDetailPage = () => {
   const { id } = useParams();
   const [song, setSong] = useState([]);
@@ -52,6 +52,8 @@ const PostDetailPage = () => {
         </CaptionMetaInfoWrapper>
       </PostDetailContentWrapper>
       <Genre song={song} />
+      <Follow song={song} />
+      <Footer />
     </DetailWrapper>
   );
 };

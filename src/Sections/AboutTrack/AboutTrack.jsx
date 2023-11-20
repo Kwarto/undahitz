@@ -3,16 +3,23 @@ import styled from "styled-components";
 import genImg from "../../assets/images/afro.jpg";
 import relatedImg from "../../assets/images/cta.jpg";
 import { IoIosHeadset } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 const AboutTrack = ({ song }) => {
+  const navigate = useNavigate();
   return (
     <AboutTrackContentWrapper>
       <TrackContentWrapper>
         <OtherTracksByArt>
-          <h1>Top Genre</h1>
+          <h2>Top Genre</h2>
           <div className="genBox">
             <div className="genreCard">
               <img src={relatedImg} alt="related" />
-              <div className="overlay">
+              <div
+                className="overlay"
+                onClick={() => {
+                  navigate(`/client/category/${song?.genre}`);
+                }}
+              >
                 <h2>AfroBeat</h2>
               </div>
             </div>
@@ -49,7 +56,7 @@ const AboutTrack = ({ song }) => {
           </div>
         </OtherTracksByArt>
         <GenreAndOthers>
-          <h1>Track Genre</h1>
+          <h2>Current Track Genre</h2>
           <div className="genBannerYard">
             <div className="genBannerCard">
               <img src={genImg} alt="gen-banner" />
@@ -93,8 +100,10 @@ const OtherTracksByArt = styled.div`
   height: 100%;
   padding: 10px;
 
-  h1 {
-    font-size: 2rem;
+  h2 {
+    color: var(--btnBgVariant);
+    font-size: 1.7rem;
+    text-transform: uppercase;
   }
 
   .genBox {
@@ -136,6 +145,7 @@ const OtherTracksByArt = styled.div`
           color: var(--mainBg);
           font-size: 1.7rem;
           font-weight: 600;
+          text-transform: uppercase;
         }
       }
 
@@ -153,8 +163,10 @@ const GenreAndOthers = styled.div`
   width: 100%;
   height: 100%;
   padding: 10px;
-  h1 {
-    font-size: 2rem;
+  h2 {
+    color: var(--btnBgVariant);
+    font-size: 1.7rem;
+    text-transform: uppercase;
   }
   .genBannerYard {
     width: 100%;
@@ -163,7 +175,7 @@ const GenreAndOthers = styled.div`
     box-shadow: 0 30px 40px var(--shadowBg);
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
 
@@ -175,7 +187,6 @@ const GenreAndOthers = styled.div`
       align-items: center;
       justify-content: center;
       padding: 1px;
-      transform: translateY(-25px);
 
       img {
         width: 100%;
@@ -188,7 +199,7 @@ const GenreAndOthers = styled.div`
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -0.7rem;
+      bottom: 1rem;
       background: linear-gradient(138deg, var(--btnBgVariant), var(--actBg));
       border-radius: 0 0 10px 10px;
       box-shadow: 0 1rem 0.5rem var(--shadowBg);
@@ -238,6 +249,7 @@ const GenreAndOthers = styled.div`
 
           &:hover {
             color: var(--mainBg);
+            transform: scale(0.9);
           }
         }
       }
