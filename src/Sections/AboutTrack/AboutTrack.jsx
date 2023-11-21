@@ -63,7 +63,12 @@ const AboutTrack = ({ song }) => {
             </div>
             <div className="layer">
               <h3>Get More {song.genre} @Undahitz</h3>
-              <div className="go">
+              <div
+                className="go"
+                onClick={() => {
+                  navigate(`/client/genre/${song?.genre}`);
+                }}
+              >
                 <IoIosHeadset className="set" />
               </div>
             </div>

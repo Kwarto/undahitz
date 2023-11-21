@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
     url(${fBgImg});
   border-radius: 10px 10px 0 0;
   box-shadow: 0 40px 30px var(--shadowBg);
-  height: 40vh;
+  height: 50vh;
   margin: 0 auto;
 `;
 

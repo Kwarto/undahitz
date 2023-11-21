@@ -1,6 +1,7 @@
 import React from "react";
 import heroImg from "../../assets/images/cat.png";
 import styled from "styled-components";
+
 const CategoryHeader = () => {
   return (
     <CategoryHeaderHeroWrapper>
@@ -12,9 +13,9 @@ const CategoryHeader = () => {
             diverse array of options for all listeners to enjoy and explore
             their favorite music.
           </p>
-          <div className="expBtn" role="button">
+          <a href={`/client/genre/#all-genres`} className="expBtn">
             Explore
-          </div>
+          </a>
         </div>
       </HeroContentWrapper>
       <HeroImgWrapper>
@@ -68,7 +69,7 @@ const HeroContentWrapper = styled.article`
     box-shadow: 0 10px 0 var(--shadowBg);
     color: var(--actBg);
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 25px;
     font-size: 20px;
     font-weight: bold;
   }

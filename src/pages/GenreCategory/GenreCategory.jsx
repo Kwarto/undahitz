@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavBar } from "../../components/comp";
+import { Footer, NavBar, Newsletter } from "../../components/comp";
 import { AllGen, Hero } from "../../Sections";
 
 const GenreCategory = () => {
@@ -9,6 +9,8 @@ const GenreCategory = () => {
       <NavBar />
       <Hero />
       <AllGen />
+      <Newsletter />
+      <Footer />
     </GenreCategoryWrapper>
   );
 };

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <NavBarWrapper>
       <LogoWrapper>
@@ -9,10 +11,34 @@ const NavBar = () => {
         <h2>UNDAHITZ</h2>
       </LogoWrapper>
       <MenuItemsWrapper>
-        <NavLink>Home</NavLink>
-        <NavLink>All Genre</NavLink>
-        <NavLink>Services</NavLink>
-        <NavLink>Contact</NavLink>
+        <NavLink
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          onClick={() => {
+            navigate("/client/genres");
+          }}
+        >
+          Genres
+        </NavLink>
+        <NavLink
+          onClick={() => {
+            navigate("/client/products");
+          }}
+        >
+          Products
+        </NavLink>
+        <NavLink
+          onClick={() => {
+            navigate("/client/about-us");
+          }}
+        >
+          About Us
+        </NavLink>
       </MenuItemsWrapper>
       <AuthorBtnWrapper>Author Login</AuthorBtnWrapper>
     </NavBarWrapper>

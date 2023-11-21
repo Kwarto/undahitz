@@ -34,12 +34,14 @@ const Newsletter = () => {
 
 const NewsletterSectionWrapper = styled.section`
   background: var(--mainBg);
-  width: 100%;
+  width: 90%;
   height: 100%;
-  padding: 50px 1rem;
+  padding: 30px 1rem;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px auto;
   @media screen and (max-width: 430px) {
     padding: 10px 3px;
   }
@@ -90,7 +92,7 @@ const SubscribeContentBox = styled.div`
   .txt {
     h3 {
       color: var(--btnBg);
-      font-size: 2rem;
+      font-size: 1.7rem;
       padding: 10px 0;
       span {
         color: var(--btnBg);
