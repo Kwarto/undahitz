@@ -71,5 +71,8 @@ const BlogContainerWrapper = styled.section`
       outline: 2px solid var(--heroBg1);
     }
   }
+  @media screen and (max-width: 768px) {
+    padding: 50px 10px;
+  }
 `;
 export default BlogContainer;
