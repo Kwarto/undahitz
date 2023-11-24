@@ -52,7 +52,7 @@ const SingleBlogCardWrapper = styled.div`
   cursor: pointer;
   padding: 8px 10px;
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
