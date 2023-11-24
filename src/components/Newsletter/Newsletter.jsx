@@ -42,6 +42,9 @@ const NewsletterSectionWrapper = styled.section`
   align-items: center;
   justify-content: center;
   margin: 10px auto;
+  @media screen and (max-width: 768px) {
+    width: 98%;
+  }
   @media screen and (max-width: 430px) {
     padding: 10px 3px;
   }
@@ -53,6 +56,9 @@ const NewsletterContentWrapper = styled.article`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
   @media screen and (max-width: 430px) {
     grid-template-columns: 1fr;
     width: 100%;
@@ -68,7 +74,7 @@ const SubscribeImgWrapper = styled.div`
     width: 80%;
     height: 100%;
   }
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;

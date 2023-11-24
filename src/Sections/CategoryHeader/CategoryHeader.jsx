@@ -36,6 +36,12 @@ const CategoryHeaderHeroWrapper = styled.section`
   gap: 1rem;
   margin: 10px 0;
   padding: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 98%;
+    height: 90vh;
+  }
 `;
 
 const HeroContentWrapper = styled.article`
@@ -73,8 +79,22 @@ const HeroContentWrapper = styled.article`
     font-size: 20px;
     font-weight: bold;
   }
+  @media screen and (max-width: 768px) {
+    height: max-content;
+    text-align: left;
+
+    .capArea {
+      p {
+        padding-bottom: 10px;
+      }
+    }
+  }
 `;
 
-const HeroImgWrapper = styled(HeroContentWrapper)``;
+const HeroImgWrapper = styled(HeroContentWrapper)`
+  img {
+    width: 85%;
+  }
+`;
 
 export default CategoryHeader;

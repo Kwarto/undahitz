@@ -76,6 +76,9 @@ const AllGenresWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    height: 70vh;
+  }
 `;
 
 const AllGenresGridWrapper = styled.article`
@@ -149,6 +152,14 @@ const LeftContentWrapper = styled.div`
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    .genBox {
+      .genlst {
+        padding: 18px;
+      }
+    }
+  }
 `;
 
 const RightContentWrapper = styled.div`
@@ -213,6 +224,13 @@ const RightContentWrapper = styled.div`
         }
       }
     }
+  }
+  @media screen and (max-width: 768px) {
+    top: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+    display: none;
   }
 `;
 

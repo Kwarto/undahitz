@@ -59,6 +59,11 @@ const SingleBlogCardWrapper = styled.div`
   .card {
     width: 100%;
     height: max-content;
+    transition: all 2s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 20px var(--formBg);
+      border-radius: 10px;
+    }
   }
   .capArea {
     background: var(--mainBg);

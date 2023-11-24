@@ -47,5 +47,11 @@ const ProductHeroWrapper = styled.header`
     cursor: pointer;
     color: var(--mainBgVariant);
   }
+  @media screen and (max-width: 768px) {
+    width: 98%;
+    p {
+      width: 90%;
+    }
+  }
 `;
 export default ProductHero;

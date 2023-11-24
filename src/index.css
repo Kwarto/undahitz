@@ -17,10 +17,11 @@
   --mainBgVariant: rgb(246, 246, 248);
   --btnBg: rgb(0, 0, 255);
   --btnBgVariant: rgba(4, 4, 105, 0.76);
+  --formBg: rgba(4, 4, 105, 0.233);
   --shadowBg: rgba(0, 0, 255, 0.055);
   --textBg: rgb(0, 0, 0);
   --actBg: rgb(20, 114, 168);
-  --overBg: rgba(0, 0, 0, 0.897);
+  --overBg: rgba(0, 0, 0, 0.863);
   --heroBg1: rgb(29, 103, 177);
   --heroBg2: rgba(53, 85, 228, 0.952);
 }

@@ -145,14 +145,14 @@ const Services = () => {
 
 const ServicesContentWrapper = styled.section`
   width: 90%;
-  height: 80vh;
+  height: 85vh;
   background: var(--mainBg);
   box-shadow: 0 30px 40px var(--shadowBg);
   border-radius: 10px;
 
   .top {
     width: 100%;
-    height: 100%;
+    height: max-content;
     border-radius: 10px 10px 0 0;
     display: grid;
     grid-template-columns: 70% 29%;
@@ -168,7 +168,6 @@ const ServicesContentWrapper = styled.section`
 
     .top-box {
       width: 100%;
-      height: 100%;
       padding: 10px;
       background: linear-gradient(var(--actBg), var(--btnBgVariant));
       border-radius: 10px;
@@ -267,6 +266,44 @@ const ServicesContentWrapper = styled.section`
         width: 95%;
         aspect-ratio: 1/1;
         border-radius: inherit;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: max-content;
+    width: 98%;
+    .top {
+      grid-template-columns: 100%;
+      .detail {
+        display: flex;
+      }
+      .mid {
+        width: 100%;
+        background: red;
+        padding: 0;
+        img {
+          width: 100%;
+          height: max-content;
+        }
+      }
+      .top-box {
+        height: 100%;
+        p {
+          font-size: 16px;
+        }
+        .ls {
+          padding: 0;
+          height: 46%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .dgms {
+          transform: translateY(0);
+          margin: 0 auto;
+        }
       }
     }
   }

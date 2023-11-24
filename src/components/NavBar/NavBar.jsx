@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
+
   return (
     <NavBarWrapper>
       <LogoWrapper>
@@ -40,7 +41,13 @@ const NavBar = () => {
           About Us
         </NavLink>
       </MenuItemsWrapper>
-      <AuthorBtnWrapper>Author Login</AuthorBtnWrapper>
+      <AuthorBtnWrapper
+        onClick={() => {
+          navigate("/auth");
+        }}
+      >
+        Author Login
+      </AuthorBtnWrapper>
     </NavBarWrapper>
   );
 };
